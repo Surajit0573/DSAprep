@@ -1,5 +1,6 @@
 import java.util.*;
-public class _207_CourseSchedule{
+public class _210_CourseSchedule2{
+
     public static class Edge{
         int s;
         int d;
@@ -10,25 +11,25 @@ public class _207_CourseSchedule{
     }
 
     //DFS - Util
-    public static boolean dfs(ArrayList<Edge>[] graph,boolean[] s,boolean[] vis,int curr){
+    public static boolean dfs(ArrayList<Edge>[] graph,Stack<Integer> s,boolean[] vis,int curr,boolean[] st){
         vis[curr]=true;
-        s[curr]=true; 
+        st[curr]=true; 
         for(int i=0;i<graph[curr].size();i++){
             Edge e=graph[curr].get(i);
-            if(s[e.d]==true){
+            if(st[e.d]==true){
                 return true;
             }
             if(!vis[e.d]){
-                if(dfs(graph, s, vis, e.d)){
+                if(dfs(graph, s, vis, e.d,st)){
                     return true;
                 }
             }
         }
-       s[curr]=false;
-       return false;
+        st[curr]=false;
+        s.push(curr);
+        return false;
     }
-
-    public static boolean canFinish(int n, int[][] p) {
+    public static int[] findOrder(int n, int[][] p) {
         @SuppressWarnings("unchecked")
         ArrayList<Edge>[] graph =new ArrayList[n];
         for(int i=0;i<n;i++){
@@ -39,21 +40,31 @@ public class _207_CourseSchedule{
         }
         boolean[] vis=new boolean[n];
         boolean[] stack=new boolean[n];
+        Stack<Integer>s=new Stack<>();
         //DFS
         for(int i=0;i<n;i++){
             if(!vis[i]){
-                if(dfs(graph,stack,vis,i)){
-                    return false;
+                if(dfs(graph,s,vis,i,stack)){
+                    int[] a={};
+                   return a;
                 }
             }
         }
-        return true;
+        int x=0;
+        int[] ans=new int[n];
+        while(!s.isEmpty()){
+            ans[x]=s.pop();
+            x++;
+        }
+        return ans;
     }
-
 public static void main(String args[]){
 Scanner sc=new Scanner(System.in);
-int[][] p={{0,10},{3,18},{5,5},{6,11},{11,14},{13,1},{15,1},{17,4}};
-System.out.println(canFinish(20,p));
+int[][] p={{0,1},{1,2}};
+int[] ans=findOrder(3, p);
+for(int i=0;i<ans.length;i++){
+    System.out.print(ans[i]+" ");
+}
 sc.close();
 }
 }
