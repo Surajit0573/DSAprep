@@ -1,5 +1,19 @@
-# Welcome to my Repositories
-- Here I save all DSA Problems of DSA Sheet by Apna College which I solved.
-- And all LeetCode Problems which I solved.
-- Please Contribute &hearts; if there any optimization available.
-- Apna College DSA Sheet link : https://docs.google.com/spreadsheets/d/1hXserPuxVoWMG9Hs7y8wVdRCJTcj3xMBAEYUOXQ5Xag/edit#gid=0
+# 🚀 LeetCodeBucket - Unleash Your Problem-Solving Prowess!
+
+
+## 📚 Overview
+
+Welcome to the **LeetCodeBucket** repository - the ultimate vault of coding brilliance! 🌟 Here, I've compiled my  solutions  of LeetCode problems, organized by chapters or categories.
+
+## 🚀 Chapters
+
+1. Array and Strings - 🎯
+2. Linked Lists - 🧩
+3. Binary Trees - 🌳
+4. Dynamic Programming - 🚀
+5. Graphs
+6. ...
+
+The list goes on, and the thrill never ends! 🚀
+
+
