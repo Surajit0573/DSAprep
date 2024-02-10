@@ -11,7 +11,7 @@ public class _210_CourseSchedule2{
     }
 
     //DFS - Util
-    public static boolean dfs(ArrayList<Edge>[] graph,Stack<Integer> s,boolean[] vis,int curr,boolean[] st){
+    public static boolean dfs(ArrayList<Edge>[] graph,Stack<Integer>s,boolean[] vis,int curr,boolean[] st){
         vis[curr]=true;
         st[curr]=true; 
         for(int i=0;i<graph[curr].size();i++){

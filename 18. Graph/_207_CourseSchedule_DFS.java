@@ -1,5 +1,5 @@
 import java.util.*;
-public class _207_CourseSchedule{
+public class _207_CourseSchedule_DFS{
     public static class Edge{
         int s;
         int d;
